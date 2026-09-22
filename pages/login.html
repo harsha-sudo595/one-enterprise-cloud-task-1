@@ -5,121 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employee Login</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+ <link rel="stylesheet" href="../css/login.css">
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f7fb;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .login-container {
-            width: 100%;
-            max-width: 420px;
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
-        }
-
-        .logo {
-            text-align: center;
-            font-size: 28px;
-            font-weight: bold;
-            color: #2563eb;
-            margin-bottom: 10px;
-        }
-
-        .login-title {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .login-title h1 {
-            color: #172554;
-            font-size: 26px;
-            margin-bottom: 8px;
-        }
-
-        .login-title p {
-            color: #64748b;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 7px;
-            font-weight: bold;
-            color: #334155;
-        }
-
-        input[type="text"],
-        input[type="email"],
-        input[type="password"] {
-            width: 100%;
-            padding: 13px;
-            border: 1px solid #cbd5e1;
-            border-radius: 6px;
-            font-size: 15px;
-        }
-
-        input:focus {
-            outline: none;
-            border-color: #2563eb;
-        }
-
-        .login-options {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 25px;
-            font-size: 14px;
-        }
-
-        .remember {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .forgot {
-            color: #2563eb;
-            text-decoration: none;
-        }
-
-        .login-btn {
-            width: 100%;
-            padding: 13px;
-            background: #2563eb;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        .login-btn:hover {
-            background: #1d4ed8;
-        }
-
-        .error-message {
-            color: #dc2626;
-            text-align: center;
-            margin-top: 15px;
-            display: none;
-        }
-    </style>
 </head>
 
 <body>
@@ -180,27 +67,9 @@
 
     </main>
 
-    <script>
-        document.getElementById("loginForm").addEventListener("submit", function(event) {
-
-            event.preventDefault();
-
-            const employee = document.getElementById("employee").value;
-            const password = document.getElementById("password").value;
-            const errorMessage = document.getElementById("errorMessage");
-
-            if (employee === "admin" && password === "admin123") {
-
-                window.location.href = "dashboard.html";
-
-            } else {
-
-                errorMessage.style.display = "block";
-
-            }
-
-        });
-    </script>
+    
+      <script src="../js/employee-login.js"></script>
+    
 
 </body>
 </html>

@@ -6,96 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leave Request Management</title>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 40px;
-            background: #f4f6fb;
-        }
-
-        h1 {
-            text-align: center;
-            color: #263f8f;
-            margin-bottom: 30px;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .form-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .field {
-            display: flex;
-            flex-direction: column;
-        }
-
-        label {
-            font-weight: bold;
-            margin-bottom: 8px;
-        }
-
-        input,
-        select,
-        textarea {
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            font-size: 15px;
-            box-sizing: border-box;
-        }
-
-        textarea {
-            min-height: 100px;
-            resize: vertical;
-        }
-
-        .full-width {
-            grid-column: 1 / -1;
-        }
-
-        .buttons {
-            text-align: center;
-            margin-top: 25px;
-        }
-
-        button {
-            padding: 13px 28px;
-            border: none;
-            border-radius: 25px;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-            margin: 5px;
-        }
-
-        .apply-btn {
-            background: #2878e8;
-        }
-
-        .reset-btn {
-            background: #d9535f;
-        }
-
-        .back {
-            display: block;
-            text-align: center;
-            margin-top: 25px;
-            color: #2878e8;
-            text-decoration: none;
-            font-weight: bold;
-        }
-    </style>
+     <link rel="stylesheet" href="../../css/leave.css">
 </head>
 
 <body>
@@ -174,45 +85,7 @@
         ← Back to Employee Management
     </a>
 
-
-    <script>
-        const fromDate = document.getElementById("fromDate");
-        const toDate = document.getElementById("toDate");
-        const totalDays = document.getElementById("totalDays");
-
-        function calculateDays() {
-
-            if (fromDate.value && toDate.value) {
-
-                const start = new Date(fromDate.value);
-                const end = new Date(toDate.value);
-
-                const difference =
-                    (end - start) / (1000 * 60 * 60 * 24) + 1;
-
-                if (difference > 0) {
-                    totalDays.value = difference;
-                } else {
-                    totalDays.value = "";
-                    alert("To Date must be after From Date.");
-                }
-            }
-        }
-
-        fromDate.addEventListener("change", calculateDays);
-        toDate.addEventListener("change", calculateDays);
-
-
-        document.getElementById("leaveForm").addEventListener("submit", function (event) {
-
-            event.preventDefault();
-
-            alert("Leave applied successfully.");
-
-            this.reset();
-            totalDays.value = "";
-        });
-    </script>
+<script src="../data/leave.js"></script>
 
 </body>
 

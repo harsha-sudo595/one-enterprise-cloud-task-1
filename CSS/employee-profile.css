@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Employee Profile</title>
-
-    <style>
+  
         body {
             font-family: Arial, sans-serif;
             background: #f4f7fb;
@@ -77,61 +69,4 @@
             display: block;
             margin-bottom: 6px;
         }
-    </style>
-</head>
-
-<body>
-
-<header>
-    <h1>Employee Profile</h1>
-
-    <a href="dashboard.html" class="back-btn">
-        Dashboard
-    </a>
-</header>
-
-<div class="container">
-
-    <div class="profile">
-        <h2>Employee Profile</h2>
-        <p>View employee information and details.</p>
-    </div>
-
-    <div class="details">
-
-        <div class="detail">
-            <strong>Employee ID</strong>
-            101
-        </div>
-
-        <div class="detail">
-            <strong>Employee Name</strong>
-            Rahul Sharma
-        </div>
-
-        <div class="detail">
-            <strong>Department</strong>
-            Development
-        </div>
-
-        <div class="detail">
-            <strong>Designation</strong>
-            Software Developer
-        </div>
-
-        <div class="detail">
-            <strong>Status</strong>
-            Active
-        </div>
-
-        <div class="detail">
-            <strong>Email</strong>
-            rahul.sharma@example.com
-        </div>
-
-    </div>
-
-</div>
-
-</body>
-</html>
+  

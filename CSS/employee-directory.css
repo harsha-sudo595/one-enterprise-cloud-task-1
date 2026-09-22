@@ -1,0 +1,46 @@
+  
+    .employee-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        padding: 30px;
+    }
+
+    .employee-card {
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        text-align: center;
+    }
+
+    .employee-photo {
+        width: 100px !important;
+        height: 100px !important;
+        border-radius: 50%;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto 15px;
+    }
+
+    .employee-card h2 {
+        margin: 10px 0;
+        font-size: 22px;
+    }
+
+    .employee-card p {
+        margin: 8px 0;
+        font-size: 16px;
+    }
+
+    @media (max-width: 900px) {
+        .employee-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 600px) {
+        .employee-container {
+            grid-template-columns: 1fr;
+        }
+    }
