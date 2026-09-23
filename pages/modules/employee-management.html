@@ -1,61 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>HRMS Employee Management</title>
-
+    <title>Employee Management</title>
 
     <link rel="stylesheet" href="../../css/employee-management.css">
 </head>
 
 <body>
 
-<div class="container">
+    <div class="container">
 
-    <div class="header">
-        <h1>👨‍💼 HRMS Employee Management</h1>
-        <p>Create and manage employee details</p>
+        <!-- Header -->
+        <div class="header">
+            <h1>👨‍💼 HRMS Employee Management</h1>
+            <p>Create Employee Details</p>
+        </div>
+
+
+        <!-- Employee Form -->
+        <div class="form-section">
+
+            <h2>Employee Details</h2>
+
+            <form id="employeeForm">
+
+                <input
+                    type="text"
+                    id="employeeId"
+                    placeholder="Employee ID"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="employeeName"
+                    placeholder="Employee Name"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="department"
+                    placeholder="Department"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="designation"
+                    placeholder="Designation"
+                    required
+                >
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Email"
+                    required
+                >
+
+                <button type="submit" id="addEmployeeBtn">
+                    Add Employee
+                </button>
+
+                <button
+                    type="button"
+                    id="updateEmployeeBtn"
+                    style="display: none;"
+                >
+                    Update Employee
+                </button>
+
+            </form>
+
+
+            <!-- HRMS Navigation Buttons -->
+            <div class="hrms-buttons">
+
+                <button
+                    type="button"
+                    onclick="window.location.href='../employee-directory.html'">
+                    View Employee Directory
+                </button>
+
+                <button
+                    type="button"
+                    onclick="window.location.href='../attendance.html'">
+                    Attendance Management
+                </button>
+
+                <button
+                    type="button"
+                    onclick="window.location.href='./leave.html'">
+                    Leave Management
+                </button>
+
+                <button
+                    type="button"
+                    onclick="window.location.href='../leave-approval.html'">
+                    Leave Approval
+                </button>
+
+                <button
+                    type="button"
+                    onclick="window.location.href='../dashboard.html'">
+                    HR Dashboard
+                </button>
+
+                <button
+                    type="button"
+                    onclick="window.location.href='../employee-profile.html'">
+                    Employee Profile
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Total Employees -->
+        <div class="total-section">
+
+            <h2>
+                Total Employees:
+                <span id="totalEmployees">0</span>
+            </h2>
+
+        </div>
+
+
+        <!-- Employee Table -->
+        <div class="table-section">
+
+            <h2>Employee List</h2>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Designation</th>
+                        <th>Email</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody id="employeeTableBody">
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <!-- Back Button -->
+        <a class="back" href="../../index.html">
+            ← Back to One Enterprise Platform
+        </a>
+
     </div>
 
-    <div class="menu">
 
-        <a href="../employees.html">
-            Add Employee
-        </a>
-
-        <a href="../employee-directory.html">
-            View Employee Directory
-        </a>
-
-        <a href="../attendance.html">
-            Attendance Management
-        </a>
-
-        <a href="leave.html">
-            Leave Management
-        </a>
-
-        <a href="../leave-approval.html">
-            Leave Approval
-        </a>
-
-        <a href="../dashboard.html">
-            HR Dashboard
-        </a>
-
-        <a href="../employee-profile.html">
-            Employee Profile
-        </a>
-
-    </div>
-
-    <a class="back" href="../../index.html">
-        ← Back to One Enterprise Platform
-    </a>
-
-</div>
+    <!-- JavaScript -->
+    <script src="../../data/employee-management.js"></script>
+    <script src="../../JS/employee-management.js"></script>
 
 </body>
+
 </html>
